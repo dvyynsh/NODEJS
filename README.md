@@ -8,3 +8,21 @@ like "start": "node index.js" ---------------------- If we want to run then we t
 Then we installed this thing By typing below command in terminal.....
  [ npm install express ]
 Also You can go to their website // Expressjs and see all tutorials in GETTING STARTED section.
+
+
+--------------------------------------------------------------------
+// after copying a code from the wesite this below code
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+----------------------------------------------------------------------
+if you run by typing [ npm run start ] 
+Then your server will run just type localhost:3000 on browuser
