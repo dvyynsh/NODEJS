@@ -1,19 +1,38 @@
-echo "# DSA" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/dvyynsh/DSA.git
-git push -u origin main
+[ npm init ]
+= It will create a file called package.json
+and in script section = we create own ---
+like "start": "node index.js" ---------------------- If we want to run then we type -------- npm run start   
 
 
 
-git remote add origin https://github.com/dvyynsh/NODEJS.git
-git branch -M main
-git push -u origin main
+Then we installed this thing By typing below command in terminal.....
+[ npm install express ]
+Also You can go to their website // Expressjs and see all tutorials in GETTING STARTED section.
 
-## To Push File
-git status
-git add .
-git commit -m "Add current changes"
-git push origin main
+
+--------------------------------------------------------------------
+// after copying a code from the wesite this below code
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+----------------------------------------------------------------------
+if you run by typing [ npm run start ] 
+Then your server will run just type localhost:3000 on browuser
+
+
+// Also one last thing Enhancing the port from webste called dotenv
+1. install [ npm i dotenv ] 
+2. Create a file named .env ---- write there PORT=3000
+3. In your fisrt folder index.js write [ require('dotenv').config() ]
+4. Change app.listen(process.env.PORT. ()=>{
+
+})
+5. Now the application is Production ready
