@@ -1,7 +1,7 @@
 # Finally Mega Project
 
 # first we did
-  1. npm init
+  bash `npm init`
 
 # adding .gitignore file
   it will ensure that node_modules folder is not pushed to git
@@ -19,7 +19,54 @@
 
 # we using Nodemon for running our project
  (what it does is it will automatically restart the server when we make changes in our code)
-  [ npm i -D nodemon ]
+  bash ` npm i -D nodemon `
 
   But also change package.json file to add script for nodemon
   in script remove test and add "dev": "nodemon src/index.js" in scripts
+
+# next we add folders in src folder
+  1. controllers
+  2. models
+  3. routes
+  4. utils
+  as this is how production apps are structured and organized.
+
+{
+## How to connect a Databse to our project (using MongoDB)
+# We made an account on mongoDb atlas (free trial)
+  1. After creating account and choosing plan we create a cluster
+  2. Then In security tab in Quickstart section
+  3. select local environment and ip 0.0.0.0/0 Finish and close
+  4. You can view in Project Overview section.
+  5. Also if you want to delete then go to security/NetworkAccess.
+
+# Now here's comes interesting part
+  1. In database/clusters section click on connect --> compass.
+  2. you saw the string but password not written there.
+  3. copy the string and paste it in .env file and add your password there.
+  4. Make sure remove that ending '/'.
+}
+
+# Now we need to install packages for our project 
+# Using three major packages
+  1. express
+  2. mongoose
+  3. dotenv
+  bash `npm i express mongoose dotenv`
+package.json file will be updated with these dependencies.
+
+-----------------------------------------------------------------------------------------------
+
+## Game Begin....
+  approch 1: In index.js file we will write code to connect our database and start our server.
+  but approch 1 looks messy and unorganized so we will go for approch 2.
+  we going to write in db/index.js file and export it to index.js file.
+
+  After Completion we got error
+  ` cannot find module 'C:\Users\divya\OneDrive\Desktop\NodeJS\03_MegaProject\src\constants.js' imported from C:\Users\divya\OneDrive\Desktop\NodeJS\03_MegaProject\src\index.js `
+  1. this error can be cured by changing the import files like ./db to ./db.index.js
+  2. but the error may also come 'querySrv ECONNREFUSED` and many more big error
+  3. So instead use connect through CONNECT->DRIVERS->OFF srvconnectionstring-> then copy that to your env.
+
+
+
