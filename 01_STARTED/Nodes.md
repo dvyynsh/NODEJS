@@ -1,3 +1,8 @@
+## how we push to git
+![alt text](image.png)
+
+
+
 [ npm init ]
 = It will create a file called package.json
 and in script section = we create own ---
