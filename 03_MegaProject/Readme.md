@@ -80,3 +80,14 @@ bash ` npm i cookie-parser cors `
 ## Making Schema
  1. Folder Models
 
+## USing Aggregate-Paginate-v2
+bash ` npm i mongoose-aggregate-paginate-v2 `
+and using on video.model.js
+
+## Using Another Library
+ 1. bcrypt
+ 2. jsonwebtoken
+bash ` npm i bcrypt jsonwebtoken `
+
+import it into user.models
+Using JsonWebtoken in .env file ( you can cheack how to use this in their website)
