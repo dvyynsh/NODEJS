@@ -72,4 +72,11 @@ package.json file will be updated with these dependencies.
 ## installed cookie-parser cors
 bash ` npm i cookie-parser cors `  
 
+# Finished API, Errors All Handling 
+  1. put in the folder [ utils ]
+  2. Manupulated App.js and added one line in .env file also
+  3. Manupulated index.js also
+
+## Making Schema
+ 1. Folder Models
 
