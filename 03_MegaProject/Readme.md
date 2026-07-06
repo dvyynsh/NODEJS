@@ -69,4 +69,7 @@ package.json file will be updated with these dependencies.
   3. So instead use connect through CONNECT->DRIVERS->OFF srvconnectionstring-> then copy that to your env.
 
 
+## installed cookie-parser cors
+bash ` npm i cookie-parser cors `  
+
 
