@@ -104,3 +104,13 @@ bash ` npm i multer `
 working on folder middleWare/mutler
 Simple thing in every npm install if want to use it read documention in their website how to use
 Then Copy paste code from there no need to learn or MugUp...
+
+## Handled with Controller
+
+## Till now what we did Server will run 
+It will show running at port
+
+----------------------------------------------------------------------------------------------------------------
+
+# Dounloading Postman
+

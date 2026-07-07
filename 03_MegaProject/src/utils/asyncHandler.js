@@ -15,10 +15,10 @@ const asyncHandler = (fn) => async (req, res, next) => {
 
 // Sometimes in production grade app they use another syntax
 
-const asyncHandler = (requestHandler) =>{
-  (req, res, next) => {
-    promise.resolve(requestHandler(req, res, next)).
-    catch((err) => next(err))
+const asyncHandler = (requestHandler) => {
+  return (req, res, next) => {
+    Promise.resolve(requestHandler(req, res, next))     // dont spell it "promise" its "Promise"
+      .catch((err) => next(err))
   }
 }
 
