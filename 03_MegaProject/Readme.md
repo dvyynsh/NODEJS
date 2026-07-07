@@ -91,3 +91,16 @@ bash ` npm i bcrypt jsonwebtoken `
 
 import it into user.models
 Using JsonWebtoken in .env file ( you can cheack how to use this in their website)
+
+## Now how to upload files...
+we are using cloudinary
+  1. bash ` npm install cloudinary `
+  2. Create an account there
+  3. Putting in utils/cloudinary.js ---> prototyped code 
+  4. Adding in .env file also
+
+## We install mutler also
+bash ` npm i multer `
+working on folder middleWare/mutler
+Simple thing in every npm install if want to use it read documention in their website how to use
+Then Copy paste code from there no need to learn or MugUp...
