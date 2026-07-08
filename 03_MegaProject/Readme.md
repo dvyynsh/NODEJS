@@ -110,7 +110,17 @@ Then Copy paste code from there no need to learn or MugUp...
 ## Till now what we did Server will run 
 It will show running at port
 
-----------------------------------------------------------------------------------------------------------------
+Making user.Controllers.js 
+How user send and upload their information
+---------------------------------------------------------------------------------------
 
-# Dounloading Postman
+
+# Dounloading Postman (its for cheacking purpse)
+  1. start server
+  2. open postman
+  3. Type this link there: http://localhost:8000/api/v1/users/register
+  4. So there are various of option how to send data.(none,form-data,xwww-form,raw)
+  5. we select form-data as it also have image upload functionality.
+  6. And the image will be uploaded and shown in public/temp folder.
+  and in the clodinar also in assets section mediaLibrary.
 
