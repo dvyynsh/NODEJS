@@ -158,6 +158,7 @@ Body: Select raw → JSON and paste:
   "password": "password123"
 }
 Click Send
-
   
-
+✅ Register - 201 Created         
+✅ Login - 200 OK with tokens
+✅ Logout - 200 OK (when authenticated) --> leave it as it is raw json one
