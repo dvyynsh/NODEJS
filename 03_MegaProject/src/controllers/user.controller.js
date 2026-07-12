@@ -77,7 +77,7 @@ const generateAccessAndRefreshTokens = async(userId) => {
     try{
        const user = await User.findbyId(userId)
        const accessToken = user.generateAccessToken()
-       const accessToken = user.generateRefreshToken()
+       const refreshToken = user.generateRefreshToken()
        user.refreshToken = refreshToken
        await user.save({validateBeforeSave: false})
        return{accessToken, refreshToken} 
@@ -120,14 +120,14 @@ const loginUser = asyncHandler( async(req, res) => {
     select("-password -refreshToken")
 
     const options = {
-        httpOnly = true,
-        secure = true
+        httpOnly: true,
+        secure: true
     }
 
     return res
     .status(200)
-    .cookie("accessToken", accessToken, Options)
-    .cookie("refreshToken", refreshToken, Options)
+    .cookie("accessToken", accessToken, options)
+    .cookie("refreshToken", refreshToken, options)
     .json(
         new ApiResponse(
             200,
@@ -154,8 +154,8 @@ const logoutUser = asyncHandler(async(req, res) => {
     )
 
     const options = {
-        httpOnly = true,
-        secure = true
+        httpOnly: true,
+        secure: true
     }
 
     return res
