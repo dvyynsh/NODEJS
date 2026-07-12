@@ -124,6 +124,40 @@ How user send and upload their information
   6. And the image will be uploaded and shown in public/temp folder.
   and in the clodinar also in assets section mediaLibrary.
 
+## For Ckeaking register Form
+To start creating API requests in Postman, follow these steps:
+
+Create a new request - Click the "+" button at the top of the window (next to the "Overview" tab)
+
+Or add to your collection - Right-click on "My Collection" on the left sidebar and select "Add a request"
+
+Then:
+
+Name your request (e.g., "Register User")
+Select HTTP method - Choose POST from the dropdown
+Enter URL - Paste: http://localhost:8000/api/v1/users/register
+Add headers - Go to Headers tab and add:
+Key: Content-Type
+Value: application/json
+Add body - Go to Body tab → Select form-data → Add:
+fullname, email, username, password (text)
+avatar, coverImage (file)
+Click Send - Execute the request
+
+## Now we cheack Login Form
+
+Create a new Login request in Postman:
+
+Click the "+" tab next to your register request
+Enter the details:
+Method: POST
+URL: http://localhost:8000/api/v1/users/login
+Body: Select raw → JSON and paste:
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+Click Send
 
   
 

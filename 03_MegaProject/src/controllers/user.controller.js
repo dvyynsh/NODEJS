@@ -75,7 +75,7 @@ const registerUser = asyncHandler( async(req, res) => {
 
 const generateAccessAndRefreshTokens = async(userId) => {
     try{
-       const user = await User.findbyId(userId)
+       const user = await User.findById(userId)
        const accessToken = user.generateAccessToken()
        const refreshToken = user.generateRefreshToken()
        user.refreshToken = refreshToken
@@ -141,7 +141,7 @@ const loginUser = asyncHandler( async(req, res) => {
 })
 
 const logoutUser = asyncHandler(async(req, res) => { 
-    User.findByIdAndUpdate(
+    await User.findByIdAndUpdate(
         req.user._id,
         {
             $set: {
