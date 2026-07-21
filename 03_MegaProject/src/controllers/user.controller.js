@@ -3,8 +3,7 @@ import {ApiError} from "../utils/apiError.js";
 import { User } from "../models/user.model.js"
 import { uploadOnCloudinary } from "../utils/cloudinary.js"
 import { ApiResponse } from "../utils/ApiResponse.js";
-import jwt from "jsonwebtoken"
-import mongoose from "mongoose";
+
 
 const registerUser = asyncHandler( async(req, res) => {
     // get user detailes from frontend
